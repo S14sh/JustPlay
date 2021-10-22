@@ -8,6 +8,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.slash.justplay.ui.layout.CommonScaffold
 import com.slash.justplay.ui.theme.JustPlayTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,22 +18,17 @@ class MainActivity : ComponentActivity() {
             JustPlayTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+                    CommonScaffold()
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     JustPlayTheme {
-        Greeting("Android")
+        CommonScaffold()
     }
 }
