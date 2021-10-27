@@ -3,7 +3,7 @@ package com.slash.justplay.ui.layout
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
-import com.slash.justplay.ui.viewgroup.topAppBarWithBack
+import com.slash.justplay.ui.viewgroup.commonTopBar
 
 /**
  * @author Slash.R.Wei
@@ -12,8 +12,7 @@ import com.slash.justplay.ui.viewgroup.topAppBarWithBack
 @Composable
 fun CommonScaffold(scaffoldState: ScaffoldState = rememberScaffoldState()) {
     val composableScope = rememberCoroutineScope()
-    topAppBarWithBack(
-        name = "test",
+    commonTopBar(
         scaffoldState = scaffoldState,
         composableScope = composableScope
     )
