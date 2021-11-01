@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
             JustPlayTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    commonScaffold(){
+                    commonScaffold() {
 
                     }
                 }
@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DefaultPreview() {
     JustPlayTheme {
-        commonScaffold(){
+        commonScaffold() {
 
         }
     }

@@ -7,24 +7,24 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 
 private val DarkColorPalette = darkColors(
-    primary = Black,
-    primaryVariant = Black,
-    secondary = Black
+        primary = Black,
+        primaryVariant = Black,
+        secondary = Black
 )
 
 private val LightColorPalette = lightColors(
-    primary = White,
-    primaryVariant = White,
-    secondary = White
+        primary = White,
+        primaryVariant = White,
+        secondary = White
 
-    /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
+        /* Other default colors to override
+        background = Color.White,
+        surface = Color.White,
+        onPrimary = Color.White,
+        onSecondary = Color.Black,
+        onBackground = Color.Black,
+        onSurface = Color.Black,
+        */
 )
 
 @Composable
@@ -36,9 +36,9 @@ fun JustPlayTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composab
     }
 
     MaterialTheme(
-        colors = colors,
-        typography = Typography,
-        shapes = Shapes,
-        content = content
+            colors = colors,
+            typography = Typography,
+            shapes = Shapes,
+            content = content
     )
 }
