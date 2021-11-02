@@ -2,13 +2,13 @@ package com.slash.justplay.ui.viewgroup
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.dp
+import com.slash.justplay.constant.IS_IN_MAIN
 import kotlinx.coroutines.CoroutineScope
 
 /**

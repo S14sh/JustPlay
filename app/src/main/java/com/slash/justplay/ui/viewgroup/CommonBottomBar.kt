@@ -1,5 +1,6 @@
 package com.slash.justplay.ui.viewgroup
 
+import android.util.Log
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -9,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import com.slash.justplay.R
+import com.slash.justplay.constant.IS_IN_MAIN
 import com.slash.justplay.ui.theme.Black
 import com.slash.justplay.ui.theme.White
 
@@ -31,7 +33,7 @@ fun commonBottomBar(
                         .fillMaxHeight()
                         .weight(weight = 0.5f),
                         onClick = {
-
+                            IS_IN_MAIN.value = true
                         }) {
                     Icon(
                             painter = painterResource(id = R.drawable.icon_bottom_main),
@@ -47,7 +49,7 @@ fun commonBottomBar(
                         .fillMaxHeight()
                         .weight(weight = 0.5f),
                         onClick = {
-
+                            IS_IN_MAIN.value = false
                         }) {
                     Icon(
                             painter = painterResource(id = R.drawable.icon_bottom_list),
