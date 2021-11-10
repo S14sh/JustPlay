@@ -7,6 +7,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.tooling.preview.Preview
+import com.google.accompanist.insets.ProvideWindowInsets
 import com.slash.justplay.constant.IS_IN_MAIN
 import com.slash.justplay.ui.theme.JustPlayTheme
 import com.slash.justplay.ui.viewgroup.CommonContentList
@@ -19,13 +20,15 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             JustPlayTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    commonScaffold() {
-                        if (IS_IN_MAIN.value) {
-                            CommonContentMain()
-                        } else {
-                            CommonContentList()
+                ProvideWindowInsets {
+                    // A surface container using the 'background' color from the theme
+                    Surface(color = MaterialTheme.colors.background) {
+                        commonScaffold() {
+                            if (IS_IN_MAIN.value) {
+                                CommonContentMain()
+                            } else {
+                                CommonContentList()
+                            }
                         }
                     }
                 }
@@ -44,3 +47,4 @@ fun DefaultPreview() {
         }
     }
 }
+

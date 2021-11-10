@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.dp
-import com.slash.justplay.constant.IS_IN_MAIN
+import com.google.accompanist.insets.ProvideWindowInsets
 import kotlinx.coroutines.CoroutineScope
 
 /**
@@ -17,42 +17,42 @@ import kotlinx.coroutines.CoroutineScope
  */
 @Composable
 fun commonScaffold(
-        composableScope: CoroutineScope = rememberCoroutineScope(),
-        scaffoldState: ScaffoldState = rememberScaffoldState(),
-        topBar: @Composable () -> Unit = {
-            commonTopBar(composableScope = composableScope, scaffoldState = scaffoldState)
-        },
-        drawerContent: @Composable ColumnScope.() -> Unit = {
-            Surface(
-                    color = MaterialTheme.colors.primary
+    composableScope: CoroutineScope = rememberCoroutineScope(),
+    scaffoldState: ScaffoldState = rememberScaffoldState(),
+    topBar: @Composable () -> Unit = {
+        commonTopBar(composableScope = composableScope, scaffoldState = scaffoldState)
+    },
+    drawerContent: @Composable ColumnScope.() -> Unit = {
+        Surface(
+            color = MaterialTheme.colors.primary
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(80.dp)
             ) {
-                Box(
-                        modifier = Modifier
-                                .fillMaxWidth()
-                                .height(80.dp)
-                ) {
-                    Text(
-                            text = "more test",
-                            style = MaterialTheme.typography.h5,
-                            modifier = Modifier.align(Alignment.Center),
-                    )
-                }
+                Text(
+                    text = "more test",
+                    style = MaterialTheme.typography.h5,
+                    modifier = Modifier.align(Alignment.Center)
+                )
             }
-        },
-        drawerShape: Shape = MaterialTheme.shapes.small,
-        bottomBar: @Composable () -> Unit = {
-            commonBottomBar()
-        },
-        backgroundColor: Color = Color.LightGray.copy(alpha = 0.3f),
-        content: @Composable (PaddingValues) -> Unit
+        }
+    },
+    drawerShape: Shape = MaterialTheme.shapes.small,
+    bottomBar: @Composable () -> Unit = {
+        commonBottomBar()
+    },
+    backgroundColor: Color = Color.LightGray.copy(alpha = 0.3f),
+    content: @Composable (PaddingValues) -> Unit
 ) {
     Scaffold(
-            topBar = topBar,
-            drawerContent = drawerContent,
-            drawerShape = drawerShape,
-            bottomBar = bottomBar,
-            scaffoldState = scaffoldState,
-            backgroundColor = backgroundColor,
-            content = content
+        topBar = topBar,
+        drawerContent = drawerContent,
+        drawerShape = drawerShape,
+        bottomBar = bottomBar,
+        scaffoldState = scaffoldState,
+        backgroundColor = backgroundColor,
+        content = content
     )
 }
